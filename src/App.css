@@ -1,0 +1,61 @@
+.bg-image {
+  position: relative;
+  background: linear-gradient(rgba(8, 8, 8, 0.3), rgba(8, 8, 8, 0.3)),
+    url("./assets/letsCook-background.jpg");
+  min-height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.text-content {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header-title {
+  color: #fff;
+  font-size: 55px;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.search-box {
+  padding-top: 100px !important;
+  padding-bottom: 20px !important;
+}
+
+.search-heading {
+  font-size: 20px;
+
+  margin-bottom: 16px;
+}
+
+.detailsPageContent {
+  padding-top: 100px !important;
+}
+
+.recipe-title {
+  white-space: nowrap; /* Prevent text from wrapping to the next line */
+  overflow: hidden; /* Hide overflowing text */
+  text-overflow: ellipsis; /* Show ellipsis (...) for overflow */
+  max-width: 100%; /* Ensure the title does not exceed the card width */
+  display: inline-block; /* Display in a single line */
+  vertical-align: middle; /* Align vertically in the middle */
+  cursor: pointer; /* Add pointer cursor for hover effect */
+}
+
+.recipe-title:hover::before {
+  content: attr(title); /* Show the full title as a tooltip on hover */
+  position: absolute;
+  background: #fff; /* Background color of the tooltip */
+  padding: 5px;
+  border: 1px solid #ccc; /* Border style for the tooltip */
+  border-radius: 4px;
+  color: #333; /* Text color of the tooltip */
+  z-index: 1; /* Ensure the tooltip appears above other content */
+  white-space: normal; /* Allow the tooltip to wrap if necessary */
+}
